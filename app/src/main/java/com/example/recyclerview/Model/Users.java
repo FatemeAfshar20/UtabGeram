@@ -1,8 +1,9 @@
 package com.example.recyclerview.Model;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Users {
+public class Users implements Serializable {
     private UUID mID=UUID.randomUUID();
     private String mUserName;
     private int mImageId;

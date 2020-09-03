@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller.ChatPageFragment">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/armin" />
+
+    <TextView
+        android:id="@+id/username"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="133dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@id/profile"
+        android:layout_alignBottom="@id/profile"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toRightOf="@id/profile"
+        android:gravity="center_vertical"
+        android:textColor="#FAE0E0"
+        tools:text="@tools:sample/avatars" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/username"
+        android:background="@drawable/background_chat"
+        />
+</RelativeLayout>
