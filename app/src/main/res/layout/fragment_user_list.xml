@@ -6,4 +6,4 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:id="@+id/recycler_view"
-    tools:context=".UserListFragment"/>
+    tools:context=".Controller.Fragment.UserListFragment"/>

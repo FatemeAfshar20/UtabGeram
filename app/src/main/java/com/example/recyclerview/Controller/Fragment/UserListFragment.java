@@ -1,4 +1,4 @@
-package com.example.recyclerview;
+package com.example.recyclerview.Controller.Fragment;
 
 import android.os.Bundle;
 
@@ -13,12 +13,14 @@ import android.widget.Adapter;
 
 import com.example.recyclerview.Adapter.UserAdapter;
 import com.example.recyclerview.Model.Users;
+import com.example.recyclerview.R;
 import com.example.recyclerview.Repository.Repository;
 
 import java.util.List;
 
 public class UserListFragment extends Fragment {
     RecyclerView mRecyclerView;
+    List<Users> mUsersList;
     public UserListFragment() {
         // Required empty public constructor
     }
@@ -34,9 +36,10 @@ public class UserListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_user_list, container, false);
         mRecyclerView=view.findViewById(R.id.recycler_view);
+        if(mUsersList==null)
+             mUsersList= Repository.getInstance().getUsersList();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        List<Users> usersList= Repository.getInstance().getUsersList();
-        mRecyclerView.setAdapter(new UserAdapter(usersList,getContext()));
+        mRecyclerView.setAdapter(new UserAdapter(mUsersList,getContext()));
         return view;
     }
 }
