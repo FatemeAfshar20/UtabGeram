@@ -17,7 +17,7 @@
     <TextView
         android:id="@+id/username"
         style="@style/TextAppearance.AppCompat.Headline"
-        android:layout_width="133dp"
+        android:layout_width="208dp"
         android:layout_height="75dp"
         android:layout_alignTop="@id/profile"
         android:layout_alignBottom="@id/profile"
@@ -26,13 +26,36 @@
         android:layout_marginBottom="3dp"
         android:layout_toRightOf="@id/profile"
         android:gravity="center_vertical"
-        android:textColor="#FAE0E0"
+        android:textColor="#090909"
         tools:text="@tools:sample/avatars" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="651dp"
         android:layout_below="@id/username"
-        android:background="@drawable/background_chat"
-        />
+        android:background="@drawable/background_chat_page">
+
+        <EditText
+            android:id="@+id/msg"
+            android:layout_width="265dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="#949897"
+            android:gravity="center"
+            android:hint="Massage"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_send"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:text="sand"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_send" />
+
+    </FrameLayout>
+
 </RelativeLayout>

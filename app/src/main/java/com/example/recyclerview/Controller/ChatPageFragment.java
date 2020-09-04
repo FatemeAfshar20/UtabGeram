@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.recyclerview.Adapter.UserAdapter;
+import com.example.recyclerview.Adapter.Holder;
 import com.example.recyclerview.Model.Users;
 import com.example.recyclerview.R;
 
@@ -33,7 +33,7 @@ public class ChatPageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.chat_page, container, false);
-        Users user= (Users) getActivity().getIntent().getSerializableExtra(UserAdapter.EXTRA_USER_INFO);
+        Users user= (Users) getActivity().getIntent().getSerializableExtra(Holder.EXTRA_USER_INFO);
         findElem(view);
         bind(user);
         return view;
