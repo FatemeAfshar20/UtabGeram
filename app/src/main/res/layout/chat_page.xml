@@ -30,9 +30,10 @@
         tools:text="@tools:sample/avatars" />
 
     <FrameLayout
+        android:id="@+id/chat_area"
         android:layout_width="match_parent"
-        android:layout_height="651dp"
-        android:layout_below="@id/username"
+        android:layout_height="562dp"
+        android:layout_below="@+id/username"
         android:background="@drawable/background_chat_page">
 
         <EditText
